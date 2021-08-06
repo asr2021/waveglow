@@ -144,8 +144,8 @@ def train(num_gpus, rank, group_name, output_directory, epochs, learning_rate,
 
             if (iteration % iters_per_checkpoint == 0):
                 if rank == 0:
-                    checkpoint_path = "{}/waveglow_{}".format(
-                        output_directory, iteration)
+                    checkpoint_path = "{}/waveglow_English".format(
+                        output_directory)
                     save_checkpoint(model, optimizer, learning_rate, iteration,
                                     checkpoint_path)
 
